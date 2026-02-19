@@ -6,6 +6,42 @@ A RESTful API service for managing customer information, built with Java and Qua
 Diagram
 https://mermaid.ai/view/6dd69635-2553-4451-9d46-7dbac3c4b8ed
 
+config:
+  layout: dagre
+---
+flowchart TB
+ subgraph subGraph0["Data Transfer Objects"]
+        H["CreateCustomerRequest DTO"]
+        I["UpdateCustomerRequest DTO"]
+  end
+ subgraph subGraph1["Business Layer"]
+        C["CustomerService Business Logic"]
+        F["CountryService REST Client"]
+  end
+ subgraph subGraph2["Data Layer"]
+        D["CustomerRepository Data Layer"]
+        E["H2 Database"]
+  end
+ subgraph subGraph3["External Services"]
+        G["REST Countries API"]
+  end
+ subgraph subGraph4["Error Handling"]
+        K["ApplicationExceptionMapper"]
+        L["Error Responses"]
+        N["ConstraintViolationException"]
+        O["IllegalArgumentException"]
+  end
+    A["Client/API Consumer"] --> B["CustomerResource REST API"]
+    B --> C & K
+    C --> D & F & K
+    D --> E
+    F --> G
+    H --> B
+    I --> B
+    J["Customer Entity"] --> C & D
+    K --> L
+    M["Validation Layer"] --> B & N & O
+
 This service provides a comprehensive solution for customer data management with the following features:
 - Complete CRUD operations for customer management
 - Country-based customer filtering
