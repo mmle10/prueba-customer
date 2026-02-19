@@ -4,7 +4,7 @@ A RESTful API service for managing customer information, built with Java and Qua
 
 ## Overview
 Diagram
-![Architecture](https://mermaid.ai/view/6dd69635-2553-4451-9d46-7dbac3c4b8ed)
+https://mermaid.ai/view/6dd69635-2553-4451-9d46-7dbac3c4b8ed
 
 This service provides a comprehensive solution for customer data management with the following features:
 - Complete CRUD operations for customer management
