@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.example.customer.service.CustomerServiceTest
+-------------------------------------------------------------------------------
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.80 s -- in com.example.customer.service.CustomerServiceTest
